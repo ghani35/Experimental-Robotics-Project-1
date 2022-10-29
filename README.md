@@ -18,9 +18,9 @@ This github repository shows how to build a finit-state machine in ROS environme
 * Entity 
  * ![image](https://user-images.githubusercontent.com/91313196/198834787-d1b4f43c-764f-4f75-a29a-a5316d517ae6.png)
 * Individuals 
- - `C1 C2 E`: Cooridors 
- - `R1 R2 R3 R4`: Rooms
- - `D1 D2 D3 D4 D5 D6 D7`: Doors
+ ** `C1 C2 E`: Cooridors 
+ ** `R1 R2 R3 R4`: Rooms
+ *** `D1 D2 D3 D4 D5 D6 D7`: Doors
 * Object properties
 ```
 isIn
