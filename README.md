@@ -22,16 +22,13 @@ This github repository shows how to build a finit-state machine in ROS environme
   * `R1 R2 R3 R4`: Rooms
   * `D1 D2 D3 D4 D5 D6 D7`: Doors
 * Object properties
-```
-isIn
-canReach
-hasDoor 
-connectedTo
-```
+  * isIn
+  * canReach
+  * hasDoor 
+  * connectedTo
 * Data properties 
- ```
- Now
- visitedAt
- uregencyThreshold
- ```
+  * Now
+  * visitedAt
+  * uregencyThreshold
+ 
  
