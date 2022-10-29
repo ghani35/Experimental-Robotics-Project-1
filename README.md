@@ -35,11 +35,12 @@ This github repository shows how to build a finit-state machine in ROS environme
   * uregencyThreshold
  # Discreption of software architecture 
  ## Component diagram 
- The software architecture is build by four nodes, each node has a specific task to do:
+ The software architecture is build by five nodes, each node has a specific task to do:
  1. user_interface
  2. state_machine
  3. battery_controller
  4. armor 
+ 5. paramerters
 ### 1- user_interface 
  This node interact with the user in an infinit loop, allows the user to access and modify the onotology by just entring some specific inputs, then this node call the armor server in the appropriate command. Also this node publish the state of the map in the topic `/battery_state`. It publishes **0** if it is not fully loaded and **1** if it is fully loaded. 
    * The required inputs are: 
@@ -51,4 +52,24 @@ This github repository shows how to build a finit-state machine in ROS environme
   
  Then it calls the armor server by this command  
  `client.call(name_of_operation,primary_command_spec,secondary_command_spec,[args[0],args[1],args[2],... args[n]])`
+ ### 2- state_machine
+ It controlls how the robot changes its state based on the reasoning of the topological ontology, and the battery state of the robot. This node subscribes to two topics `/battery_state` and `/map_state`, and it calls the armor server for updating the loaded ontology.
+ ### 3- battery_controller 
+ This is a publisher to the topic `/baterry_state`, it publishes different state of the battery `True`or`False` in a specific duration, the durations to be full or low are passed as **parameters**.
+ ### 4- armor
+ The ARMOR package is an external package used to communicate with the Cluedo OWL ontology, it is a ROS wrapper that helps to make this communication possible. For more information about ARMOR [click here](https://github.com/EmaroLab/armor_rds_tutorial)
+ ### 5- parameters 
+ It is a **yaml** file that list all the parameters used in this project which are 
+ * time_to_stay_in_location
+ * time_of_one_charge
+ * time_of_charging
+ * visitedAt_R1
+ * visitedAt_R2
+ * visitedAt_R3
+ * visitedAt_R4
+ * visitedAt_C1
+ * visitedAt_C2
+ * visitedAt_E
+
+ 
  
