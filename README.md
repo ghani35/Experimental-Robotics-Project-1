@@ -60,16 +60,16 @@ This github repository shows how to build a finit-state machine in ROS environme
  The ARMOR package is an external package used to communicate with the Cluedo OWL ontology, it is a ROS wrapper that helps to make this communication possible. For more information about ARMOR [click here](https://github.com/EmaroLab/armor_rds_tutorial)
  ### 5- parameters 
  It is a **yaml** file that list all the parameters used in this project which are 
- * time_to_stay_in_location
- * time_of_one_charge
- * time_of_charging
- * visitedAt_R1
- * visitedAt_R2
- * visitedAt_R3
- * visitedAt_R4
- * visitedAt_C1
- * visitedAt_C2
- * visitedAt_E
+ * time_to_stay_in_location defeault value = 1 (s)
+ * time_of_one_charge  defeault value = 30 (s)
+ * time_of_charging  defeault value = 15 (s)
+ * visitedAt_R1  defeault value = 1665579740
+ * visitedAt_R2  defeault value = 1665579740
+ * visitedAt_R3  defeault value = 1665579740
+ * visitedAt_R4  defeault value = 1665579740
+ * visitedAt_C1  defeault value = 1665579740
+ * visitedAt_C2  defeault value = 1665579740
+ * visitedAt_E  defeault value = 1665579740
 
  
  
