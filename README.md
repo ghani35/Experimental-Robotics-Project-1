@@ -35,6 +35,9 @@ This github repository shows how to build a finit-state machine in ROS environme
   * uregencyThreshold
  # Discreption of software architecture 
  ## Component diagram 
+ ![image](https://user-images.githubusercontent.com/91313196/198851409-bc0fba4d-e1bf-4a38-8351-e3df6bbe7b30.png)
+
+ 
  The software architecture is build by five nodes, each node has a specific task to do:
  1. user_interface
  2. state_machine
