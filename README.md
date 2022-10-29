@@ -34,4 +34,20 @@ This github repository shows how to build a finit-state machine in ROS environme
   * visitedAt
   * uregencyThreshold
  # Discreption of software architecture 
+ ## Component diagram 
+  The software architecture is build by four nodes, each node has a specific task to do:
+  1- user_interface
+  2- state_machine
+  3- battery_controller
+  4- armor 
+### user_interface 
+ This node interact with the user in an infinit loop, allows the user to access and modify the onotology by just entring some specific inputs, then this node call the armor server in the appropriate command. Also this node publish the state of the map in the topic `/battery_state`. It publishes **0** if it is not fully loaded and **1** if it is fully loaded. 
+   * The required inputs are: 
+     * The type of operation `manipulation, query, utils`
+     * The name of operation `ADD, LOAD, ...`
+     * The primary_command_spec
+     * The secondary_command_spec 
+     * The number of arguments 
+     * The arguments 
+ Then it calls the armor server by this command `client.call(name_of_operation,primary_command_spec,secondary_command_spec,[args[0],args[1],args[2],... args[n]])`
  
