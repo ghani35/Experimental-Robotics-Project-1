@@ -48,6 +48,6 @@ This github repository shows how to build a finit-state machine in ROS environme
      * The primary_command_spec
      * The secondary_command_spec 
      * The number of arguments 
-     * The arguments 
+  
  Then it calls the armor server by this command `client.call(name_of_operation,primary_command_spec,secondary_command_spec,[args[0],args[1],args[2],... args[n]])`
  
