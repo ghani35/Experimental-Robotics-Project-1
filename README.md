@@ -73,6 +73,8 @@ This github repository shows how to build a finit-state machine in ROS environme
  * visitedAt_C1  defeault value = 1665579740
  * visitedAt_C2  defeault value = 1665579740
  * visitedAt_E  defeault value = 1665579740
+## State diagram 
+![image](https://user-images.githubusercontent.com/91313196/198852520-90de1eb7-e835-48dc-acd0-007a13d0e306.png)
 
- 
+
  
