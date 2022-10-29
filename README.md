@@ -33,6 +33,5 @@ This github repository shows how to build a finit-state machine in ROS environme
   * Now
   * visitedAt
   * uregencyThreshold
- 
- 
+ # Discreption of software architecture 
  
