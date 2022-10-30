@@ -76,11 +76,11 @@ This github repository shows how to build a finit-state machine in ROS environme
  * visitedAt_E  defeault value = 1665579740
 ### List of messages 
 * Map_state.msg: `int32 map_state`, carry the state of the map
- * It is 1 if the map is fully loaded 
- * It is 0 if the map is not fully loaded
+  * It is 1 if the map is fully loaded 
+  * It is 0 if the map is not fully loaded
 * Battry_state.msg: `int32 battery_state`, carry the state of the battery
- * It is 1 if the battery is full
- * It is 0 if the battery is low
+  * It is 1 if the battery is full
+  * It is 0 if the battery is low
 ## State diagram 
 ![image](https://user-images.githubusercontent.com/91313196/198852520-90de1eb7-e835-48dc-acd0-007a13d0e306.png)
 
