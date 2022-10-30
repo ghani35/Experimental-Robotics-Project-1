@@ -95,7 +95,7 @@ There are four states in this state diagram, the task of each state is explained
 3. Visiting_urgent:  First, the robots checks if the battery is low goes to `CHARGING` state, else it checkes it the urgent room is reacheable by quering the object properties of the robot `canReach`, if the room can be reached it visit it and return back to the `MOVING_IN_CORRIDORS` trough the transition `visited`. If the urgent room is not reacheable it goes to `MOVING_IN_CORRIDORS` state through the transition `not_reached`, in this case the robot will change the corridors and visit it again.
 4. CHARGING: The robot keeps checking the state of the battery, if it is full it goes to `MOVING_IN_COORIDORS` state the the transition `charged`, otherwise, it stays in the `CHARGING` state. 
 ## Temporatl diagram 
-..........................................................................
+
 # 3. Instalation and running procedures
 1. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
 2. Change the path to `path = '/root/your_work_space/src/assignment/src/topological_map.owl'`
@@ -116,6 +116,12 @@ There are four states in this state diagram, the task of each state is explained
 `rosrun smach_viewer smach_viewer.py` 
 # 4. A small video showing the relevent parts of the running code
 https://user-images.githubusercontent.com/91313196/198888618-3acce94f-d051-485e-9753-c39f3e8622dd.mp4
+
+This video shows how the state machine behaves when we have an event. 
+* phase1: The state machine is in the state `FILLING_MAP`, the user enter the last individual `D1` and telling the state machine taht the map is fully loaded.
+* phase2: State machine goes to `MOVING_IN_CORRIDORS`, then the battery is low and the state machine goes to `CHARGING`. after charging it goes back to `MOVING_IN_CORRIDORS`.
+* phase3: The room R1 becomes urgent, the SM goes to `VISITING_URGENT`. then goig back to `MOVING_IN_CORRIDORS`
+For more detail, watch the video.
 # 5. Working hypothesis and environement
 In this project there are many assumptions made on the environement in order to make the project simpler, the assumptions are explained bellow
 1. The movement of the robot is not performed in real world, so if we make a simulation we will not see the robot moving. The movements is performed only on the level of onotology. A movement is defined by changing the location of the robot by `isIn`, and updating the time `now`.
