@@ -38,12 +38,13 @@ This github repository shows how to build a finit-state machine in ROS environme
  ![image](https://user-images.githubusercontent.com/91313196/198851409-bc0fba4d-e1bf-4a38-8351-e3df6bbe7b30.png)
 
  
- The software architecture is build by five nodes, each node has a specific task to do:
+ The software architecture is build by four nodes, list of parameters and two customized messages, each node has a specific task to do:
  1. user_interface
  2. state_machine
  3. battery_controller
  4. armor 
- 5. paramerters
+ * List of paramerters
+ * List of meesages 
 ### 1- user_interface 
  This node interact with the user in an infinit loop, allows the user to access and modify the onotology by just entring some specific inputs, then this node call the armor server in the appropriate command. Also this node publish the state of the map in the topic `/battery_state`. It publishes **0** if it is not fully loaded and **1** if it is fully loaded. 
    * The required inputs are: 
@@ -61,7 +62,7 @@ This github repository shows how to build a finit-state machine in ROS environme
  This is a publisher to the topic `/baterry_state`, it publishes different state of the battery `True`or`False` in a specific duration, the durations to be full or low are passed as **parameters**.
  ### 4- armor
  The ARMOR package is an external package used to communicate with the Cluedo OWL ontology, it is a ROS wrapper that helps to make this communication possible. For more information about ARMOR [click here](https://github.com/EmaroLab/armor_rds_tutorial)
- ### 5- parameters 
+ ### List of parameters 
  It is a **yaml** file that list all the parameters used in this project which are 
  * time_to_stay_in_location defeault value = 1 (s)
  * time_of_one_charge  defeault value = 30 (s)
@@ -73,6 +74,13 @@ This github repository shows how to build a finit-state machine in ROS environme
  * visitedAt_C1  defeault value = 1665579740
  * visitedAt_C2  defeault value = 1665579740
  * visitedAt_E  defeault value = 1665579740
+### List of messages 
+* Map_state.msg: `int32 map_state`, carry the state of the map
+ * It is 1 if the map is fully loaded 
+ * It is 0 if the map is not fully loaded
+* Battry_state.msg: `int32 battery_state`, carry the state of the battery
+ * It is 1 if the battery is full
+ * It is 0 if the battery is low
 ## State diagram 
 ![image](https://user-images.githubusercontent.com/91313196/198852520-90de1eb7-e835-48dc-acd0-007a13d0e306.png)
 
