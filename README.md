@@ -139,5 +139,11 @@ In this project there are many assumptions made on the environement in order to 
 2. The time can be continuously updated and depends on the distance and speed of the robot to reach a specific location
 3. Make the robot willing to move by knowing just its current position and how he can reach another position and building the map by itself
 # 6. Author and Teachers contacts 
+* Author 
+  * name: BAKOUR Abdelghani
+  * email: bakourabdelghani1999@gmail.com
+* Teachers
+  * name: Luca Buoncompagni luca.buoncompagni@edu.unige.it
+  * name: Carmine Recchiuto carmine.recchiuto@dibris.unige.it
 
  
