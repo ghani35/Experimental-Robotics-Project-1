@@ -7,7 +7,10 @@
   * temporal diagram 
 * Instalation and running procedures
 * A small video showing the relevent parts of the running code
-* System limitaiton and possible improvments 
+* Working hypothesis and environment
+  * System's features 
+  * System's limitations
+  * Possible technical improvements 
 * Authors and Teachers contact  
 # Introduction 
 This github repository shows how to build a finit-state machine in ROS environment based on [SMACH](http://wiki.ros.org/smach/Tutorials) ros-package, and how to build a topological onotology of the wrold, in this small project, Protogé is used for building the ontology, [ARMOR](https://github.com/EmaroLab/armor_rds_tutorial) service is used for access and modify the ontology.
@@ -111,6 +114,22 @@ There are four states in this state diagram, the task of each state is explained
   * battery.py: allows you to monitor the state of the batter
 7. In another terminal run the smach_viewer to visualize the state machine
 `rosrun smach_viewer smach_viewer.py` 
+# A small video showing the relevent parts of the running code
+....................................................................................
+# Working hypothesis and environement
+In this project there are many assumptions made on the environement in order to make the project simpler, the assumptions are explained bellow
+1. The movement of the robot is not performed in real world, so if we make a simulation we will not see the robot moving. The movements is performed only on the level of onotology. A movement is defined by changing the location of the robot by `isIn`, and updating the time `now`.
+2. Initializing the `visitedAt` data proporty of a location to different values to avoid making all of them **urgent** at the same time 
+3. When a robot is in a specific location, it can reach only the locations that need **one door** transmition
+
+## Pssible Limitations
+1. "The time to do a move" and "the time to stay in a location" and "the time step to be updated" is considered to be the same, and it is passed as a parameter to the code by the parameter `time_to_stay_in_location`
+2. The robot does not move it there is a missing part in the map, this is not practical, because in real life if we have a person in the same situation, the persone starts moving and discouvering the environment by himself, and starts acting even if he does not know the whole environment 
+
+## Possible improvements
+1. The movement can be improved by consediring a real motion in cartesian space, this is can be done by including the `planer` and `controller` nodes in the architecture. for more information about planer and controller nodes visit this [repository](https://github.com/buoncubi/arch_skeleton.git)  
+2. The time can be continuously updated and depends on the distance and speed of the robot to reach a specific location
+3. Make the robot willing to move by knowing just its current position and how he can reach another position and building the map by itself
 
 
 
