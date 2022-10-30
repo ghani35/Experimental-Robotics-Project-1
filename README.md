@@ -1,17 +1,17 @@
 # Experimental-robotics-Ass1
 # Outline 
-* Introduction 
-* Desrciption of software architecture 
-  * Component diagram
-  * state diagram 
-  * temporal diagram 
-* Instalation and running procedures
-* A small video showing the relevent parts of the running code
-* Working hypothesis and environment
-  * System's features 
-  * System's limitations
-  * Possible technical improvements 
-* Authors and Teachers contact  
+1. Introduction 
+2. Desrciption of software architecture 
+   * Component diagram
+   * state diagram 
+   * temporal diagram 
+3. Instalation and running procedures
+4. A small video showing the relevent parts of the running code
+5. Working hypothesis and environment
+   * System's features 
+   * System's limitations
+   * Possible technical improvements 
+6. Authors and Teachers contact  
 # Introduction 
 This github repository shows how to build a finit-state machine in ROS environment based on [SMACH](http://wiki.ros.org/smach/Tutorials) ros-package, and how to build a topological onotology of the wrold, in this small project, Protogé is used for building the ontology, [ARMOR](https://github.com/EmaroLab/armor_rds_tutorial) service is used for access and modify the ontology.
 #### Environment
