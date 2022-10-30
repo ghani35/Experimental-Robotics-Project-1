@@ -12,7 +12,7 @@
    * System's limitations
    * Possible technical improvements 
 6. Authors and Teachers contact  
-# Introduction 
+# 1. Introduction 
 This github repository shows how to build a finit-state machine in ROS environment based on [SMACH](http://wiki.ros.org/smach/Tutorials) ros-package, and how to build a topological onotology of the wrold, in this small project, Protogé is used for building the ontology, [ARMOR](https://github.com/EmaroLab/armor_rds_tutorial) service is used for access and modify the ontology.
 #### Environment
  It is a 2D-environmen built up with 4 rooms `R1 R2 R3 R4`, 2 corridors `C1 C2` and one special room `E` used as a waiting room befor filling the map, and a charging station as well. And 7 doors `D1 ... D7`  
@@ -38,7 +38,7 @@ This github repository shows how to build a finit-state machine in ROS environme
   * Now
   * visitedAt
   * uregencyThreshold
- # Discreption of software architecture 
+ # 2. Discreption of software architecture 
  ## Component diagram 
  ![image](https://user-images.githubusercontent.com/91313196/198851409-bc0fba4d-e1bf-4a38-8351-e3df6bbe7b30.png)
 
@@ -96,7 +96,7 @@ There are four states in this state diagram, the task of each state is explained
 4. CHARGING: The robot keeps checking the state of the battery, if it is full it goes to `MOVING_IN_COORIDORS` state the the transition `charged`, otherwise, it stays in the `CHARGING` state. 
 ## Temporatl diagram 
 ..........................................................................
-# Instalation and running procedures
+# 3. Instalation and running procedures
 1. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
 2. Change the path to `path = '/root/your_work_space/src/assignment/src/topological_map.owl'`
 3. (optionl!) Change the other parameters if you want to test some relevent parts of the code
@@ -114,9 +114,9 @@ There are four states in this state diagram, the task of each state is explained
   * battery.py: allows you to monitor the state of the batter
 7. In another terminal run the smach_viewer to visualize the state machine
 `rosrun smach_viewer smach_viewer.py` 
-# A small video showing the relevent parts of the running code
+# 4. A small video showing the relevent parts of the running code
 ....................................................................................
-# Working hypothesis and environement
+# 5. Working hypothesis and environement
 In this project there are many assumptions made on the environement in order to make the project simpler, the assumptions are explained bellow
 1. The movement of the robot is not performed in real world, so if we make a simulation we will not see the robot moving. The movements is performed only on the level of onotology. A movement is defined by changing the location of the robot by `isIn`, and updating the time `now`.
 2. Initializing the `visitedAt` data proporty of a location to different values to avoid making all of them **urgent** at the same time 
@@ -130,7 +130,6 @@ In this project there are many assumptions made on the environement in order to 
 1. The movement can be improved by consediring a real motion in cartesian space, this is can be done by including the `planer` and `controller` nodes in the architecture. for more information about planer and controller nodes visit this [repository](https://github.com/buoncubi/arch_skeleton.git)  
 2. The time can be continuously updated and depends on the distance and speed of the robot to reach a specific location
 3. Make the robot willing to move by knowing just its current position and how he can reach another position and building the map by itself
-
-
+# 6. Author and Teachers contacts 
 
  
