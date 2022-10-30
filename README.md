@@ -5,8 +5,10 @@
   * Component diagram
   * state diagram 
   * temporal diagram 
+* Instalation and running procedures
+* A small video showing the relevent parts of the running code
 * System limitaiton and possible improvments 
-* Instalation and running procedures 
+* Authors and Teachers contact  
 # Introduction 
 This github repository shows how to build a finit-state machine in ROS environment based on [SMACH](http://wiki.ros.org/smach/Tutorials) ros-package, and how to build a topological onotology of the wrold, in this small project, Protogé is used for building the ontology, [ARMOR](https://github.com/EmaroLab/armor_rds_tutorial) service is used for access and modify the ontology.
 #### Environment
@@ -89,6 +91,21 @@ There are four states in this state diagram, the task of each state is explained
 2. Moving in corridors: The robots keeps moving between `C1` and `C2` for infinit time, the robots keep cheking the state of the battery by subscribing to the topic `/battery_state`, if the battery is `low` the robot goes to `CHARGING` state trough the transition `tired`. if the battery is not low, the robot cheks if there is an `urgent` room by quering the `individuals of the class urg`. If there is an urgent room the robot goes to `VISITING_URGENT` state through the transition `urgent`.
 3. Visiting_urgent:  First, the robots checks if the battery is low goes to `CHARGING` state, else it checkes it the urgent room is reacheable by quering the object properties of the robot `canReach`, if the room can be reached it visit it and return back to the `MOVING_IN_CORRIDORS` trough the transition `visited`. If the urgent room is not reacheable it goes to `MOVING_IN_CORRIDORS` state through the transition `not_reached`, in this case the robot will change the corridors and visit it again.
 4. CHARGING: The robot keeps checking the state of the battery, if it is full it goes to `MOVING_IN_COORIDORS` state the the transition `charged`, otherwise, it stays in the `CHARGING` state. 
+## Temporatl diagram 
+..........................................................................
+# Instalation and running procedures
+1. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
+2. Change the path to `path = '/root/your_work_space/src/assignment/src/topological_map.owl'`
+3. (optionl!) Change the other parameters if you want to test some relevent parts of the code
+4. If you do not have [smach_package](http://wiki.ros.org/smach/Tutorials/Getting%20Started), run this command:
+ `sudo apt-get install ros-noetic-smach-ros`
+5. If you do not have armor installed, follow this git hub repository 
+`https://github.com/EmaroLab/armor_rds_tutorial.git`
+6. Open new terminal and run `roslaunch assignment solution.launch`
+   * When you run this command, three windows should pop-up
+     1. user_interface.py
+     2. state_machine.py
+     3. battery.py
 
 
 
