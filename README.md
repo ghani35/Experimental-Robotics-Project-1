@@ -115,13 +115,7 @@ There are four states in this state diagram, the task of each state is explained
 7. In another terminal run the smach_viewer to visualize the state machine
 `rosrun smach_viewer smach_viewer.py` 
 # 4. A small video showing the relevent parts of the running code
-....................................................................................
-
-
-
-
-
-
+https://user-images.githubusercontent.com/91313196/198888618-3acce94f-d051-485e-9753-c39f3e8622dd.mp4
 # 5. Working hypothesis and environement
 In this project there are many assumptions made on the environement in order to make the project simpler, the assumptions are explained bellow
 1. The movement of the robot is not performed in real world, so if we make a simulation we will not see the robot moving. The movements is performed only on the level of onotology. A movement is defined by changing the location of the robot by `isIn`, and updating the time `now`.
