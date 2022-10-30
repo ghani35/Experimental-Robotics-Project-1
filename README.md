@@ -95,6 +95,8 @@ There are four states in this state diagram, the task of each state is explained
 3. Visiting_urgent:  First, the robots checks if the battery is low goes to `CHARGING` state, else it checkes it the urgent room is reacheable by quering the object properties of the robot `canReach`, if the room can be reached it visit it and return back to the `MOVING_IN_CORRIDORS` trough the transition `visited`. If the urgent room is not reacheable it goes to `MOVING_IN_CORRIDORS` state through the transition `not_reached`, in this case the robot will change the corridors and visit it again.
 4. CHARGING: The robot keeps checking the state of the battery, if it is full it goes to `MOVING_IN_COORIDORS` state the the transition `charged`, otherwise, it stays in the `CHARGING` state. 
 ## Temporatl diagram 
+Below is the sequence diagram that shows the sequence of opertaion of each node of this project. 
+![Screenshot 2022-10-30 185406](https://user-images.githubusercontent.com/91313196/198893808-df1aea23-d94b-44c8-ace1-4fe59ea7d23f.png)
 
 # 3. Instalation and running procedures
 1. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
