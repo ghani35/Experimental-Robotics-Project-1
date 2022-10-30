@@ -106,9 +106,9 @@ There are four states in this state diagram, the task of each state is explained
   1. user_interface.py
   2. state_machine.py
   3. battery.py
-* user_inerface.py: allows you to load the ontology, and notify the algorithm if the map is fully loaded
-* state_machine.py: prints the state transition of the robot, helps you to understand and debug 
-* battery.py: allows you to monitor the state of the batter
+  * user_inerface.py: allows you to load the ontology, and notify the algorithm if the map is fully loaded
+  * state_machine.py: prints the state transition of the robot, helps you to understand and debug 
+  * battery.py: allows you to monitor the state of the batter
 7. In another terminal run the smach_viewer to visualize the state machine
 `rosrun smach_viewer smach_viewer.py` 
 
