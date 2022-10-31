@@ -11,7 +11,8 @@
    * System's features 
    * System's limitations
    * Possible technical improvements 
-6. Authors and Teachers contact  
+6. Doxygen documentation
+7. Authors and Teachers contact  
 # 1. Introduction 
 This github repository shows how to build a finit-state machine in ROS environment based on [SMACH](http://wiki.ros.org/smach/Tutorials) ros-package, and how to build a topological onotology of the wrold, in this small project, Protogé is used for building the ontology, [ARMOR](https://github.com/EmaroLab/armor_rds_tutorial) service is used for access and modify the ontology.
 #### Environment
@@ -138,7 +139,11 @@ In this project there are many assumptions made on the environement in order to 
 1. The movement can be improved by consediring a real motion in cartesian space, this is can be done by including the `planer` and `controller` nodes in the architecture. for more information about planer and controller nodes visit this [repository](https://github.com/buoncubi/arch_skeleton.git)  
 2. The time can be continuously updated and depends on the distance and speed of the robot to reach a specific location
 3. Make the robot willing to move by knowing just its current position and how he can reach another position and building the map by itself
-# 6. Author and Teachers contacts 
+
+#6. Doxygen documentation
+To access doxygen documentation [click here](https://ghani35.github.io/Experimental-robotics-Ass1/)
+
+# 7. Author and Teachers contacts 
 * Author 
   * name: BAKOUR Abdelghani
   * email: bakourabdelghani1999@gmail.com
