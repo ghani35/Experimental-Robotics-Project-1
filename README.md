@@ -44,7 +44,7 @@ This github repository shows how to build a finit-state machine in ROS environme
  ![image](https://user-images.githubusercontent.com/91313196/198851409-bc0fba4d-e1bf-4a38-8351-e3df6bbe7b30.png)
 
  
- The software architecture is build by four nodes, list of parameters and two customized messages, each node has a specific task to do:
+ The software architecture is buily up by four nodes, a list of parameters and two customized messages they are listed bellow. Each node has a specific task to do:
  1. user_interface
  2. state_machine
  3. battery_controller
@@ -59,11 +59,17 @@ This github repository shows how to build a finit-state machine in ROS environme
      * The primary_command_spec
      * The secondary_command_spec 
      * The number of arguments 
+     * Arguments
   
  Then it calls the armor server by this command  
  `client.call(name_of_operation,primary_command_spec,secondary_command_spec,[args[0],args[1],args[2],... args[n]])`
  ### 2- state_machine
- It controlls how the robot changes its state based on the reasoning of the topological ontology, and the battery state of the robot. This node subscribes to two topics `/battery_state` and `/map_state`, and it calls the armor server for updating the loaded ontology.
+It controlls how the robot changes its state based on the reasoning of the topological ontology, and the battery state of the robot. This node subscribes to two topics `/battery_state` and `/map_state`, and it calls the armor server for updating the loaded ontology. The states of the robot are listed bellow.
+  * filling_map
+  * moving_in_corridors
+  * visiting_urgent
+  * charging
+ 
  ### 3- battery_controller 
  This is a publisher to the topic `/baterry_state`, it publishes different state of the battery `True`or`False` in a specific duration, the durations to be full or low are passed as **parameters**.
  ### 4- armor
