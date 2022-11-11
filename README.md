@@ -47,7 +47,7 @@ This github repository shows how to build a finit-state machine in ROS environme
 ![uml](https://user-images.githubusercontent.com/91313196/201312937-16e12109-bae3-405d-b7e8-e7d212c1053d.png)
 
  
- The software architecture is buily up by four nodes, a list of parameters and two customized messages they are listed bellow. Each node has a specific task to do:
+ The software architecture is buily up by **four nodes**, a **list of parameters** and **two customized messages** they are listed bellow. Each node has a specific task to do:
  1. user_interface
  2. state_machine
  3. battery_controller
