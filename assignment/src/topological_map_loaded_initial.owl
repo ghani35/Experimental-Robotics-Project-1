@@ -79,6 +79,12 @@
     
 
 
+    <!-- http://www.w3.org/2002/07/owl#differentFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#differentFrom"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -218,9 +224,122 @@
     
 
 
+    <!-- http://bnc/exp-rob-lab/2022-23#C1 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#C1">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D1"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D2"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D5"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D7"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579740</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#C2 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#C2">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D3"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D4"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D5"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D6"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579740</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D1 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D1"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D2 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D2"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D3 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D3"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D4 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D4"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D5 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D5"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D6 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D6"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#D7 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#D7"/>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#E -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#E">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D6"/>
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D7"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579740</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#R1 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R1">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D1"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579734</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#R2 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R2">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D2"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579736</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#R3 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R3">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D3"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579738</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://bnc/exp-rob-lab/2022-23#R4 -->
+
+    <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R4">
+        <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D4"/>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579740</visitedAt>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://bnc/exp-rob-lab/2022-23#Robot1 -->
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#Robot1">
+        <isIn rdf:resource="http://bnc/exp-rob-lab/2022-23#E"/>
         <now rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1665579740</now>
         <urgencyThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#long">10</urgencyThreshold>
     </owl:NamedIndividual>
@@ -242,6 +361,18 @@
             <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#LOCATION"/>
             <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#ROBOT"/>
         </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#C1"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#C2"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#E"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#R1"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#R2"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#R3"/>
+            <rdf:Description rdf:about="http://bnc/exp-rob-lab/2022-23#R4"/>
+        </owl:distinctMembers>
     </rdf:Description>
     
 

@@ -2,7 +2,8 @@
 <launch>
 	<rosparam command="load" file="$(find assignment)/parameters/parameters.yaml" />
           <node pkg="armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService"/> 
-	<node pkg="assignment" type="bat.py" name="bat" output="screen" launch-prefix="xterm -e"  />
+	<node pkg="assignment" type="battery.py" name="battery" output="screen" launch-prefix="xterm -e"  />
 	<node pkg="assignment" type="user_interface.py" name="user_interface" output="screen" launch-prefix="xterm -e"  />
 	<node pkg="assignment" type="state_machine.py" name="state_machine" output="screen" launch-prefix="xterm -e"  />
+	
 </launch>
