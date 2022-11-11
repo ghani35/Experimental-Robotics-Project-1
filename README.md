@@ -20,8 +20,7 @@ This github repository shows how to build a finit-state machine in ROS environme
 #### Environment
  It is a 2D-environmen built up with 4 rooms `R1 R2 R3 R4`, 2 corridors `C1 C2` and one special room `E` used as a waiting room befor filling the map, and a charging station as well. And 7 doors `D1 ... D7`  
  
- ![uml](https://user-images.githubusercontent.com/91313196/201312471-87a09324-1c55-42ed-9af8-63d8bbbffc7c.png)
-
+![image](https://user-images.githubusercontent.com/91313196/201313207-466c168a-1982-4961-84c4-a433bc645ebf.png)
 
 
 #### Senario
