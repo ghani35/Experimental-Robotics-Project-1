@@ -1,7 +1,6 @@
 # Experimental robotics Assignment1
 
-![image](https://user-images.githubusercontent.com/91313196/201306410-14d8af11-8e11-4a4f-8b86-19521dd457bb.png)
-
+![image](https://user-images.githubusercontent.com/91313196/201306579-1b867e35-9d8b-467a-963b-1c0c09856d1a.png)
 # Outline 
 1. Introduction 
 2. Desrciption of software architecture 
