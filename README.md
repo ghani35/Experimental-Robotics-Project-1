@@ -109,14 +109,15 @@ Below is the sequence diagram that shows the sequence of opertaion of each node 
 ![Screenshot 2022-10-30 185406](https://user-images.githubusercontent.com/91313196/198893808-df1aea23-d94b-44c8-ace1-4fe59ea7d23f.png)
 
 # 3. Instalation and running procedures
-1. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
-2. Change the path to `path = '/root/your_work_space/src/assignment/src/topological_map.owl'`
-3. (optionl!) Change the other parameters if you want to test some relevent parts of the code
-4. If you do not have [smach_package](http://wiki.ros.org/smach/Tutorials/Getting%20Started), run this command:
+1. Clone the repository in your work_space `git clone https://github.com/ghani35/Experimental-robotics-Ass1.git`
+2. go to `/root/your_work_space/src/assignment/parameters`, open `parameters.yaml` file 
+3. Change the path to `path = '/root/your_work_space/src/assignment/src/topological_map.owl'` 
+5. (optionl!) Change the other parameters if you want to test some relevent parts of the code
+6. If you do not have [smach_package](http://wiki.ros.org/smach/Tutorials/Getting%20Started), run this command:
  `sudo apt-get install ros-noetic-smach-ros`
-5. If you do not have armor installed, follow this git hub repository 
+6. If you do not have armor installed, follow this git hub repository 
 `https://github.com/EmaroLab/armor_rds_tutorial.git`
-6. Open new terminal and run `roslaunch assignment solution.launch`
+7. Open new terminal and run `roslaunch assignment solution.launch`
 * When you run this command, three windows and the should pop-up
   1. user_interface.py
   2. state_machine.py
@@ -124,8 +125,10 @@ Below is the sequence diagram that shows the sequence of opertaion of each node 
   * user_inerface.py: allows you to load the ontology, and notify the algorithm if the map is fully loaded
   * state_machine.py: prints the state transition of the robot, helps you to understand and debug 
   * battery.py: allows you to monitor the state of the batter
-7. In another terminal run the smach_viewer to visualize the state machine
+8. In another terminal run the smach_viewer to visualize the state machine
 `rosrun smach_viewer smach_viewer.py` 
+9. If you want to **SKIP** the part of filing the map from **user_interfaca.py**, you can use `topological_map_loaded.owl` instead of `topological_map.owl`
+   All the you have to do is to **set the path** from step **2** to `path = '/root/your_work_space/src/assignment/src/topological_map_loaded.owl'`
 # 4. A small video showing the relevent parts of the running code
 https://user-images.githubusercontent.com/91313196/198888618-3acce94f-d051-485e-9753-c39f3e8622dd.mp4
 
