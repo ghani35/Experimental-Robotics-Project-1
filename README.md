@@ -155,7 +155,6 @@ In this project there are many assumptions made on the environement in order to 
 3. Make the robot willing to move by knowing just its current position and how he can reach another position and building the map by itself
 
 # 6. Doxygen documentation
-To access doxygen documentation [click here](https://ghani35.github.io/Assignment1/)
 
 # 7. Author and Teachers contacts 
 * Author 
